@@ -1,0 +1,40 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "example-ng6-lib": [
+        "dist/example-ng6-lib"
+      ],
+      "example-ng6-lib/*": [
+        "dist/example-ng6-lib/*"
+      ],
+      "ngx-tag-it": [
+        "dist/ngx-tag-it"
+      ],
+      "ngx-tag-it/*": [
+        "dist/ngx-tag-it/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

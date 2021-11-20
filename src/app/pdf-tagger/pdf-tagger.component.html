@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="column1">
+        <div style="height: 40px;">
+            <input class="button" type='file' (change)="onSelectFile($event)">
+        </div>
+        <div>
+            <canvas id="the-canvas"></canvas>
+        </div>
+    </div>
+    <div class="column2">
+        <div *ngFor="let drawItem of drawItems; let i = index">
+            <div class="details">
+                <button (click)="delete(i)">DEL</button>
+                <div>Name: {{drawItem.name | titlecase}}</div><input placeholder="Enter Object Name"
+                    [(ngModel)]="drawItem.name" type="text">
+                <div>({{drawItem.x0}}, {{drawItem.y0}})</div>
+                <div>({{drawItem.x1}}, {{drawItem.y1}})</div>
+            </div>
+        </div>
+    </div>
+</div>
